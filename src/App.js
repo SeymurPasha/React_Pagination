@@ -11,7 +11,7 @@ function App() {
   const [comments, setComments] = useState([]);
   const [currentPage, setCurrentpage] = useState(1);
   const [loading, setLoading] = useState(false)
-  const [commentsPerPage] = useState(25)
+  const [commentsPerPage] = useState(20)
 
   useEffect(() => {
  const fetchPosts = async () => { 

@@ -1,4 +1,6 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default function Pagination({comments,commentsPerPage,moveToNextPage}) {
 
@@ -10,8 +12,15 @@ export default function Pagination({comments,commentsPerPage,moveToNextPage}) {
     }
 
     return (
-        <div>
-        {pages.map(page => <a key = {page} onClick = {() => moveToNextPage(page)}>{page}</a>)}
+        <div className = 'column'>
+        {pages.map(page => 
+        <a 
+        className = "col-md-3"
+        href = '#'
+        style = {{cursor:'pointer'}}
+        key = {page} 
+        onClick = {() => moveToNextPage(page)}>{page}</a>)}
         </div>
     )
 }
+
